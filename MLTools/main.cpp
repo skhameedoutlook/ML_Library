@@ -8,16 +8,16 @@
 
 using namespace std;
 
-void fillOccurences(string& line, string& seperator, vector<unsigned long long>& occurences) {
+void fillOccurences(string line, string seperator, vector<unsigned long long>& occurences) {
 	unsigned long long count = 0;
 	for(unsigned long long i = 0; i < line.length()-seperator.length(); i++) {
-		if(line.substr(i, seperator.length()).compare(seperator) == 0) {
+		if(line.substr(i, 1).compare(seperator) == 0) {
 			occurences.push_back(i);
 		}
 	}
 }
 
-vector<string> tokenize(string& line, string& seperator) {
+vector<string> tokenize(string line, string seperator) {
 	vector<string> result;
 	vector<unsigned long long> occurences;
 	fillOccurences(line, seperator, occurences);
@@ -49,17 +49,17 @@ vector<string> strSplit(string line, string seperator) {
 }
 
 int main() {
-	ifstream file("input.txt");
+	fstream file("test_input2.txt");
 	vector<string> rowData;
 	vector<vector<string> > fullData;
 	string line, seperator = " ";
 	vector<string> names, sizes, types;
 	getline(file, line);
-	names = strSplit(line, " ");
+	names = tokenize(line, seperator);
 	getline(file, line);
-	types = strSplit(line, " ");
+	types = tokenize(line, seperator);
 	getline(file, line);
-	sizes = strSplit(line, " ");
+	sizes = tokenize(line, seperator);
 	while(getline(file, line)) {
 		rowData = tokenize(line, seperator);
 		fullData.push_back(rowData);

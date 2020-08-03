@@ -22,13 +22,15 @@ void LinearRegressionModel::train() {
 	correlation = calcCorrelationFromString(features, labels, x_bar, y_bar, x_sd, y_sd);
 	slope = correlation*(y_sd/x_sd);
 	intercept = y_bar - (slope*x_bar);
+	
 	cout << "x_bar: " << x_bar << endl;
 	cout << "y_bar: " << y_bar << endl;
-	cout << "x_sd: " << x_sd << endl;
-	cout << "y_sd: " << y_sd << endl;
+	cout << "x_sd.: " << x_sd << endl;
+	cout << "y_sd.: " << y_sd << endl;
 	cout << "r: " << correlation << endl;
 	cout << "slope: " << slope << endl;
 	cout << "intercept: " << intercept << endl;
+	
 }
 void LinearRegressionModel::predict() {
 	predicted.clear();
@@ -37,6 +39,7 @@ void LinearRegressionModel::predict() {
 	for(unsigned long long i = trainRows; i < features.size(); i++) {
 		predictedValue = (slope*stringToLongDouble(features[i])) + intercept;
 		predicted.push_back(predictedValue);
+		//cout << predictedValue<< " P" << slope*stringToLongDouble(features[i])<<endl;
 		errors.push_back(predictedValue-stringToLongDouble(labels[i]));
 	}
 	mss = calcMSS();

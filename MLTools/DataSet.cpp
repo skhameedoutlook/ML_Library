@@ -8,8 +8,6 @@
 
 using namespace std;
 
-
-
 DataSet::DataSet(vector<string>& pnames, vector<string>& ptypes, vector<string>& psizes, vector<vector<string> >& pdata, long double train) {
 	train_percent = train;
 	numRows = pdata.size();
@@ -17,6 +15,7 @@ DataSet::DataSet(vector<string>& pnames, vector<string>& ptypes, vector<string>&
 	for(unsigned long long i = 0; i < numFields; i++) {
 		names.push_back(&pnames[i]);
 		field_indices[pnames[i]] = i;
+		//cout << pnames[i] << " set to: " << i << endl;
 		sizes.push_back(&psizes[i]);
 		types.push_back(&ptypes[i]);
 	}
