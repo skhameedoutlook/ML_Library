@@ -1,7 +1,7 @@
-﻿Build started 8/3/2020 9:51:38 PM.
+﻿Build started 8/3/2020 9:59:55 PM.
      1>Project "C:\Users\Shaik\Documents\Visual Studio 2012\Projects\MLTools\MLTools\MLTools.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt LinearRegressionModel.cpp main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt DataSet.cpp LinearRegressionModel.cpp main.cpp
          LinearRegressionModel.cpp
      1>c:\users\shaik\documents\visual studio 2012\projects\mltools\mltools\row.cpp(16): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'unsigned int', possible loss of data
      1>c:\users\shaik\documents\visual studio 2012\projects\mltools\mltools\row.cpp(25): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'unsigned int', possible loss of data
@@ -15,7 +15,18 @@
      1>c:\users\shaik\documents\visual studio 2012\projects\mltools\mltools\linearregressionmodel.cpp(40): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'unsigned int', possible loss of data
      1>c:\users\shaik\documents\visual studio 2012\projects\mltools\mltools\linearregressionmodel.cpp(43): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'unsigned int', possible loss of data
      1>c:\users\shaik\documents\visual studio 2012\projects\mltools\mltools\linearregressionmodel.cpp(50): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'unsigned int', possible loss of data
-     1>c:\users\shaik\documents\visual studio 2012\projects\mltools\mltools\linearregressionmodel.cpp(63): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'unsigned int', possible loss of data
+     1>c:\users\shaik\documents\visual studio 2012\projects\mltools\mltools\linearregressionmodel.cpp(64): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'unsigned int', possible loss of data
+         DataSet.cpp
+     1>c:\users\shaik\documents\visual studio 2012\projects\mltools\mltools\row.cpp(16): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'unsigned int', possible loss of data
+     1>c:\users\shaik\documents\visual studio 2012\projects\mltools\mltools\row.cpp(25): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'unsigned int', possible loss of data
+     1>c:\users\shaik\documents\visual studio 2012\projects\mltools\mltools\dataset.cpp(16): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'unsigned int', possible loss of data
+     1>c:\users\shaik\documents\visual studio 2012\projects\mltools\mltools\dataset.cpp(17): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'unsigned int', possible loss of data
+     1>c:\users\shaik\documents\visual studio 2012\projects\mltools\mltools\dataset.cpp(19): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'unsigned int', possible loss of data
+     1>c:\users\shaik\documents\visual studio 2012\projects\mltools\mltools\dataset.cpp(20): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'unsigned int', possible loss of data
+     1>c:\users\shaik\documents\visual studio 2012\projects\mltools\mltools\dataset.cpp(23): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'unsigned int', possible loss of data
+     1>c:\users\shaik\documents\visual studio 2012\projects\mltools\mltools\dataset.cpp(28): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'unsigned int', possible loss of data
+     1>c:\users\shaik\documents\visual studio 2012\projects\mltools\mltools\dataset.cpp(31): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'unsigned int', possible loss of data
+     1>c:\users\shaik\documents\visual studio 2012\projects\mltools\mltools\dataset.cpp(34): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'unsigned int', possible loss of data
          Generating Code...
          Skipping... (no relevant changes detected)
          main.cpp
@@ -31,4 +42,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.92
+Time Elapsed 00:00:02.96

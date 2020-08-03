@@ -15,14 +15,14 @@ LinearRegressionModel::LinearRegressionModel(DataSet* ds, string feature, string
 	}
 }
 void LinearRegressionModel::train() {
-	x_bar = calcMeanFromString(features);
-	y_bar = calcMeanFromString(labels);
-	x_sd = calcSDFromString(features, x_bar);
-	y_sd = calcSDFromString(labels, y_bar);
-	correlation = calcCorrelationFromString(features, labels, x_bar, y_bar, x_sd, y_sd);
+	x_bar = calcMeanFromString(features, trainRows);
+	y_bar = calcMeanFromString(labels, trainRows);
+	x_sd = calcSDFromString(features, x_bar, trainRows);
+	y_sd = calcSDFromString(labels, y_bar, trainRows);
+	correlation = calcCorrelationFromString(features, labels, x_bar, y_bar, x_sd, y_sd, trainRows);
 	slope = correlation*(y_sd/x_sd);
 	intercept = y_bar - (slope*x_bar);
-	
+	cout << "Calculations For Training Data Only:- " << endl;
 	cout << "x_bar: " << x_bar << endl;
 	cout << "y_bar: " << y_bar << endl;
 	cout << "x_sd.: " << x_sd << endl;
@@ -57,6 +57,7 @@ long double LinearRegressionModel::getMSS() {
 }
 void LinearRegressionModel::displayPrediction() {
 	predict();
+	cout << "Predictions For Test Data Only:- " << endl;
 	cout << "Original\t\t\t\tPredicted" << endl;
 	unsigned long long j = 0;
 	for(unsigned long long i = trainRows; i < features.size(); i++, j++) {
