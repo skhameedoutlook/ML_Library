@@ -84,6 +84,11 @@
     <ClCompile Include="Row.cpp" />
     <ClCompile Include="struct_vals.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DataSet.h" />
+    <ClInclude Include="LinearRegressionModel.h" />
+    <ClInclude Include="MLToolsUtils.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

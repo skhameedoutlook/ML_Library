@@ -1,6 +1,7 @@
 #include <string>
 #include <Field.cpp>
 #include <vector>
+#pragma once
 
 using namespace std;
 

@@ -2,8 +2,9 @@
 #include <string>
 #include <fstream>
 #include <vector>
-#include <DataSet.cpp>
 #include <sstream>
+#include <DataSet.h>
+#include <LinearRegressionModel.h>
 
 using namespace std;
 
@@ -67,6 +68,9 @@ int main() {
 	DataSet* ds;
 	ds = new DataSet(names, types, sizes, fullData, 0);
 	ds->displayData(", ");
+	LinearRegressionModel* model = new LinearRegressionModel(ds, "col1", "col2", *(ds->getFieldIndices()), 50);
+	model->train();
+	model->displayPrediction();
 
 	return  0;
 }
