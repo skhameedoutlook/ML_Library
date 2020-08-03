@@ -3,6 +3,7 @@
 #include <Field.cpp>
 #include <Row.cpp>
 #include <vector>
+#include <map>
 
 using namespace std;
 
@@ -14,12 +15,14 @@ private:
 	vector<string*> sizes;
 	vector<string*> types;
 	vector<Row*> rows;
+	map<string, unsigned long long> field_indices;
 public:
 	DataSet(vector<string>& pnames, vector<string>& ptypes, vector<string>& psizes, vector<vector<string> >& pdata) {
 		numRows = pdata.size();
 		numFields = pnames.size();
 		for(unsigned long long i = 0; i < numFields; i++) {
 			names.push_back(&pnames[i]);
+			field_indices[pnames[i]] = i;
 			sizes.push_back(&psizes[i]);
 			types.push_back(&ptypes[i]);
 		}
@@ -40,5 +43,14 @@ public:
 			}
 			cout << endl;
 		}
+	}
+	vector<Row*>* getRows() {
+		return &rows;
+	}
+	unsigned long long getNumRows() {
+		return numRows;
+	}
+	unsigned long long getNumFields() {
+		return numFields;
 	}
 };

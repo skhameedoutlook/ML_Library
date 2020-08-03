@@ -18,10 +18,11 @@ public:
 	vector<Field*>* getRow()  {
 		return &fields;
 	}
-	vector<Field*> getSubRow(vector<unsigned long long>& indexes) {
+	vector<Field*>* getSubRow(vector<unsigned long long>& indexes) {
 		subFields.clear();
 		for(unsigned long long i = 0; i < indexes.size(); i++) {
 			subFields.push_back(fields[indexes[i]]);
 		}
+		return &subFields;
 	}
 };
