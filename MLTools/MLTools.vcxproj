@@ -79,6 +79,7 @@
   <ItemGroup>
     <ClCompile Include="DataSet.cpp" />
     <ClCompile Include="Field.cpp" />
+    <ClCompile Include="LinearRegressionModel.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Row.cpp" />
     <ClCompile Include="struct_vals.cpp" />

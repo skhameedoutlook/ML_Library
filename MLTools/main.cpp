@@ -3,6 +3,7 @@
 #include <fstream>
 #include <vector>
 #include <DataSet.cpp>
+#include <sstream>
 
 using namespace std;
 
@@ -64,7 +65,7 @@ int main() {
 	}
 	file.close();
 	DataSet* ds;
-	ds = new DataSet(names, types, sizes, fullData);
+	ds = new DataSet(names, types, sizes, fullData, 0);
 	ds->displayData(", ");
 
 	return  0;

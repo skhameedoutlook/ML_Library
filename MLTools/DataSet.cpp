@@ -16,8 +16,10 @@ private:
 	vector<string*> types;
 	vector<Row*> rows;
 	map<string, unsigned long long> field_indices;
+	long double train_percent;
 public:
-	DataSet(vector<string>& pnames, vector<string>& ptypes, vector<string>& psizes, vector<vector<string> >& pdata) {
+	DataSet(vector<string>& pnames, vector<string>& ptypes, vector<string>& psizes, vector<vector<string> >& pdata, long double train) {
+		train_percent = train;
 		numRows = pdata.size();
 		numFields = pnames.size();
 		for(unsigned long long i = 0; i < numFields; i++) {
